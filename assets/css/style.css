@@ -1,0 +1,136 @@
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container .todo-app {
+    border-radius: 10px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    width: 100%;
+    max-width: 540px;
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #002765;
+}
+
+.todo-app h2 img {
+    margin-left: 10px;
+    width: 30px;
+}
+
+.todo-app .row {
+    border-radius: 30px;
+    background: #edeef9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.todo-app .row input {
+    flex: 1;
+    background: transparent;
+    font-weight: 14px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.todo-app .row button {
+    cursor: pointer;
+    border-radius: 40px;
+    background: #ff5945;
+    font-size: 16px;
+    color: #fff;
+    padding: 16px 50px;
+    border: none;
+    outline: none;
+}
+
+.todo-app #list-container li {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+}
+
+.todo-app #list-container li::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-image: url('../img/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+    height: 28px;
+    width: 28px;
+}
+
+.todo-app #list-container li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.todo-app #list-container li.checked::before {
+    background-image: url('../img/checked.png');
+}
+
+.todo-app #list-container li span {
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    top: 5px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.todo-app #list-container li span:hover {
+    background: #edeef0;
+}
+
+
+
+
+@media screen and (max-width: 600px){
+    .container {
+        min-height: 113svh;
+    }
+
+    .todo-app .row input {
+        padding-left: 0px;
+    }
+
+    .todo-app .row button {
+        font-size: 14px;
+        padding: 14px 16px;
+    }
+}
